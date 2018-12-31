@@ -17,17 +17,16 @@ To install the Logstash check on your host:
 
 1. [Download the Datadog Agent][2].
 2. Download the [`check.py` file][15] for Logstash.
-3. Place it in the Agent's `checks.d` directory.
+3. Place it in the Agent's `checks.d` directory (`/opt/nutanix/epoch/collectors/agent/checks.d/`).
 4. Rename it to `logstash.py`.
 
 ### Configuration
 
 To configure the Logstash check:
 
-1. Create a `logstash.d/` folder in the `conf.d/` folder at the root of your Agent's directory.
-2. Create a `conf.yaml` file in the `logstash.d/` folder previously created.
-3. Consult the [sample logstash.yaml][3] file and copy its content in the `conf.yaml` file.
-4. Edit the `conf.yaml`  to start collecting your [metrics][5] or [logs][6]
+2. Create a `logstash.yaml` file in the `conf.d/` integrations folder.
+3. Consult the [sample logstash.yaml][3] file and copy its content in the `logstash.yaml` file.
+4. Edit the `logstash.yaml` as needed to collect your [metrics][5] or [logs][6]
 5. [Restart the Agent][7].
 
 #### Metric Collection
